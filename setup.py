@@ -1,13 +1,4 @@
-from setuptools import setup, Extension, find_packages
-
-# Define the C extension
-guidedlda_extension = Extension(
-    'guidedlda._guidedlda',
-    sources=[
-        'guidedlda/_guidedlda.c',
-        'guidedlda/gamma.c',
-    ]
-)
+from setuptools import setup, find_packages
 
 # Setup function
 setup(
@@ -38,6 +29,5 @@ setup(
     install_requires=[
         'numpy',
     ],
-    ext_modules=[guidedlda_extension],
     setup_requires=['setuptools>=61.0', 'wheel'],
 )
